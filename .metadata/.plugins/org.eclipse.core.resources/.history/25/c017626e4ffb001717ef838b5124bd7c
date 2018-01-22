@@ -1,0 +1,14 @@
+// test account
+public class testAccount {
+
+	public static void main(String[] args) {
+	
+	Account a1 = new Account("1234","Jason Lee");
+	//a1.toString();
+	//a1.credit(500);
+	//a1.debit(200);
+	//a1.transfer("5555", 200);
+	a1.toString();		
+	}
+
+}

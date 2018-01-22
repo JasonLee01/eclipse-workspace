@@ -1,0 +1,64 @@
+//1.6 The Account Class exercise https://www.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html#zz-1.5
+public class Account {
+	private String id;
+	private String name;
+	private int balance = 0;
+	
+	//construct Account id and name
+	public Account(String id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	//construct Account id,name and balance - overloading
+	public Account(String id, String name, int amount) {
+		this.id = id;
+		this.name = name;
+		this.balance = amount;
+		}
+	
+	//getID
+	public String getID() {
+		return this.id;
+	}
+	
+	//getName
+	public String getName() {
+		return this.name;
+	}
+	
+	//getBalance
+	public int getBalance() {
+		return this.balance;
+	}
+	
+	//deposit and return balance
+	public int credit(int amount) {
+		this.balance = this.balance + amount;
+		return this.balance;
+	}
+	
+	//withdraw and return balance
+	public int debit(int amount) {
+		if (this.balance >= amount) {
+			this.balance = this.balance - amount;
+			return this.balance;
+			}
+		else
+		{	return -1;
+		}
+	}
+	
+	//transfer amount to another acct
+	public int transfer(String anotherAcct, int amount) {
+		if(this.balance >= amount) {
+			this.balance = this.balance - amount;
+			return this.balance;
+		}
+		else {return -1;}
+	}
+	
+	public String toString() {
+		return "Account[id="+this.getID()+",name="+this.getName()+",balance="+this.getBalance()+"]";
+	}
+}

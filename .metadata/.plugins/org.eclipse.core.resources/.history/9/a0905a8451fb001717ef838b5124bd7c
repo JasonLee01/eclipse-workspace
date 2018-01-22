@@ -1,0 +1,20 @@
+// test account
+public class testAccount {
+
+	public static void main(String[] args) {
+	
+		
+		Account a1 = new Account("1234","Jason Lee");
+		System.out.println(a1);
+		System.out.println(a1.credit(1000));
+		int returnValue = a1.debit(1500);
+		if (returnValue == -1) {
+			System.out.println("Amount exceeded balance");
+		}
+		else {
+			System.out.println(returnValue);
+		}
+				
+	}
+
+}
